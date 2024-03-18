@@ -8,6 +8,6 @@ export const api = {
   },
   createCheckOut: async (name: string, id: number) => {
     const res = await axios.put("/api/checkin", { name, id });
-    return (await res.data[0]) as Customer[];
+    return (await res.data[0]) as Customer;
   },
 };
