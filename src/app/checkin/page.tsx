@@ -109,13 +109,12 @@ export function CheckOutForm() {
   const onSubmit: SubmitHandler<CheckInForm> = async (data) => {
     try {
       setIsLoading(true);
-      console.log(data);
-      const res: Customer = await api.createCheckOut(
+
+      await api.createCheckOut(
         customer?.customer_name.toLowerCase() || "",
         customer?.customer_id || 0
       );
       localStorage.removeItem("customer");
-      
 
       await Swal.fire({
         title: "แจ้งเตือน",
