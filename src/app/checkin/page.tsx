@@ -97,7 +97,7 @@ export default function CheckIn() {
   );
 }
 
-export function CheckOutForm() {
+function CheckOutForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [customer, setCustomer] = useState<Customer | null>(null);
   const {
